@@ -1,4 +1,4 @@
-.App {
+.App, main {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,26 +6,97 @@
   align-content: center;
   justify-items: center;
   justify-content: center;
-}
-.hidden {
-  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color:coral;
 }
 
+#splashLogo {
+  width: 90vw;
+  height: 90vw;
+}
+
+#menu {
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: flex-end;
+  flex-direction: row;
+}
+
+#menuItem {
+  flex: 1;
+  height: 6vh;
+  background-color: rgb(250, 103, 50);
+}
+
+.miniLogo {
+  width: 50vw;
+  height: 50vw;
+}
+
+section {
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+
+/* 
 main {
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  background-color: rgb(1, 128, 111);
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  border: solid 5px blue;
+  flex: 1;
+}
+
+.spacer {
+  flex: 1;
+  border: solid 5px blue;
 }
 
 
 
-.splashScreen {
-display: flex;
-flex-direction: column;
+#splashScreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(1, 128, 111);
+
+  align-items: center;
+  justify-content: center;
 }
 
 #splashLogo {
   width: 50vw;
 }
+
+.button, input {
+  width: 50vw;
+  height: 10vw;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
 
 
 
@@ -63,4 +134,4 @@ flex-direction: column;
   to {
     transform: rotate(360deg);
   }
-}
+} */
