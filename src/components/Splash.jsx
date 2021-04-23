@@ -1,10 +1,21 @@
 import Logo from "./doggy.png";
+import { useEffect, useState } from "react";
 
-const Splash = ({goToWelcome}) => {
+
+
+
+const Splash = ({goToWelcome, dogList, setDogList}) => {
     
-    setTimeout(() => { 
+    
+    
+
+    useEffect(() => {
         goToWelcome();
-    }, 1000);
+    }, [dataDownloaded])
+    
+    // setTimeout(() => { 
+    //     goToWelcome();
+    // }, 1000);
 
     return (
         <main id="splash">

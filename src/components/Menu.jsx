@@ -3,11 +3,11 @@
 //goToWelcome={() => setCurrentScreen(welcome)}
 
 
-const Menu = () => (
+const Menu = ({goToDogs, goToOwners}) => (
     <nav id="menu">
-        <p id="menuItem">Dogs</p>
+        <p id="menuItem" onClick={goToDogs}>Dogs</p>
+        <p id="menuItem" onClick={goToOwners}>Owners</p>
         <p id="menuItem">Search</p>
-        <p id="menuItem">Owners</p>
 
     </nav>
 )

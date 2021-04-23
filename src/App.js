@@ -7,8 +7,8 @@ import { useState } from 'react';
 import Dogs from "./components/Dogs";
 import Owners from "./components/Owners";
 import Search from "./components/Search";
+import getDogs from "./Api";
 
-// const [dogList, setDogList] = useState([]);
 //   let dogsData = getDogs();
 //   for(let i = 0; i < dogList.length; i++) {
 //     let dogData = dogsData[i]
@@ -20,12 +20,21 @@ import Search from "./components/Search";
 
 function App() {
 
+  const [dataDownloaded, setDataDownloaded] = useState(false);
+
+  useEffect(() => {
+    let data = await getDogs();
+    //send data to an array somewhere
+    setDataDownloaded(true);
+}, [])
+
   const splash = "splash",
     welcome = "welcome",
     owners = "owners",
     dogs = "dogs",
     search = "search";
 
+  const [dogList, setDogList] = useState([]);
 
   const [currentScreen, setCurrentScreen] = useState(splash);
   let content = null;
@@ -33,7 +42,9 @@ function App() {
   switch (currentScreen) {
     case splash:
       content = <Splash 
-      goToWelcome={() => setCurrentScreen(welcome)}/>;
+      goToWelcome={() => setCurrentScreen(welcome)}
+      dogList
+      setDogList/>;
       break;
     case welcome:
       content = <Welcome/>;
@@ -51,14 +62,26 @@ function App() {
       content = <Welcome/>;
   }
 
-
-  return (
-    <main>
+  if(currentScreen === splash) {
+    return (
+      <main>
       {content}
-      <Menu/>
     </main>
+    )
+  } else {
+    return (
+      <main>
+        {content}
+        <Menu 
+          goToDogs={() => setCurrentScreen(dogs)}
+          goToOwners={() => setCurrentScreen(owners)}
+        />
+      </main>
+  
+    );
+  }
 
-  );
+  
 }
 
 export default App;
