@@ -1,17 +1,17 @@
+
 import Logo from "./doggy.png";
+import { useEffect, useState } from 'react';
 
 const Welcome = () => {
-    //let keys = Object.keys(localStorage);
+    const [gotData, setGotData] = useState(false);
 
-    // for(let key of keys) {
-    //     //console.log(`${key}: ${localStorage.getItem(key)}`);
-    // }
+
+
     return (
-            <section>
-                <img src={Logo} className="miniLogo" alt="dog"/>
-                <p>Welcome screen</p>
-                {/* <p>{localStorage.key}</p> */}
-            </section>
+        <section>
+            <img src={Logo} className="miniLogo" alt="dog"/>
+            <p>Welcome screen</p>
+        </section>
        
     )
 }

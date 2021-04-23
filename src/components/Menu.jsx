@@ -1,6 +1,5 @@
 
 
-//goToWelcome={() => setCurrentScreen(welcome)}
 
 
 const Menu = ({goToDogs, goToOwners}) => (

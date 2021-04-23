@@ -38,11 +38,11 @@
 }
 
 section {
-  height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
+  height: 94vh;
 }
 
 

@@ -1,18 +1,15 @@
 import Logo from "./doggy.png";
 import { useEffect, useState } from "react";
+import {useHistory, useParams} from "react-router-dom";
 
 
 
 
-const Splash = ({goToWelcome, dogList, setDogList}) => {
+const Splash = ({gotData}) => {
     
     
-    
 
-    useEffect(() => {
-        goToWelcome();
-    }, [dataDownloaded])
-    
+  
     // setTimeout(() => { 
     //     goToWelcome();
     // }, 1000);
