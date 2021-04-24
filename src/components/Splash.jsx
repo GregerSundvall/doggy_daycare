@@ -1,25 +1,43 @@
 import Logo from "./doggy.png";
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
+
+
+//   let dogsData = getDogs();
+//   for(let i = 0; i < dogList.length; i++) {
+//     let dogData = dogsData[i]
+//     setDogList(...dogList, dogData)
+//     console.log(dogData)
+//   }
 
 
 
-
-const Splash = ({goToWelcome, dogList, setDogList}) => {
+const Splash = ({goToWelcome}) => {
     
     
-    
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     for(let i = 0 ;i < data.length ; i++) {
+    //         setDogList(...dogList, data[i])
+    //         console.log(data[i])
+    //     }
+    //     setGotData(true);
+    //     console.log(data);
+    //     //goToWelcome();
+    // }, [data])
+
+    // useEffect(() => {
+    //     console.log(gotData)
+    //     //goToWelcome();
+    // }, [gotData])
+    
+    setTimeout(() => { 
         goToWelcome();
-    }, [dataDownloaded])
-    
-    // setTimeout(() => { 
-    //     goToWelcome();
-    // }, 1000);
+    }, 1000);
 
     return (
         <main id="splash">
             <img src={Logo} id="splashLogo" alt="dog"/>
+            <p>Fetching Dogs...</p>
         </main>
     )
 }
