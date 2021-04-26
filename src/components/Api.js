@@ -31,7 +31,7 @@ async function getDogs() {
         data.push({name: "Maja", age: 5, present: false, uuid:uuidv4()});
         data.push({name: "Sylle", age: 7, present: false, uuid:uuidv4()});
         data.push({name: "Pålle", age: 6, present: true, uuid:uuidv4()});
-        data.push({name: "Torsten", age: 8, present: false, uuid:uuidv4()});
+        data.push({name: "Torsten", age: 8, present: true, uuid:uuidv4()});
         data.push({name: "Jan", age: 7, present: true, uuid:uuidv4()});
         data.push({name: "Rocky", age: 9, present: true, uuid:uuidv4()});
         data.push({name: "Reagan", age: 4, present: true, uuid:uuidv4()});

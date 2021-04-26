@@ -1,4 +1,8 @@
+
+
+
 .App, main {
+  color: rgb(85, 12, 12);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -41,6 +45,7 @@
 
 section {
   height: 94vh;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -55,6 +60,7 @@ ul div {
 ul {
   overflow: scroll;
   height: 90vh;
+  width: 82vw;
 }
 
 div li {
@@ -68,6 +74,23 @@ button {
   border: 0;
   padding: 3vw;
 }
+
+#checkedInMenu {
+  display: flex;
+  flex-direction: row;
+  align-content:space-between;
+  width: 90vw;
+  
+}
+#checkedInMenu div {
+  font-size: small;
+  flex: 1;
+  background-color: rgb(250, 103, 50);
+  border: solid 1vw coral;
+  align-self: center;
+  padding: 2vw;
+}
+
 
 /* 
 main {
