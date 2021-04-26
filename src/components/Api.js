@@ -2,12 +2,12 @@ import {v4 as uuidv4} from 'uuid';
 
 
 async function getDogs() {
-    // let url = "https://api.jsonbin.io/b/5f4d604b514ec5112d136cd6"
+    //let url = "https://api.jsonbin.io/b/5f4d604b514ec5112d136cd6"
     
 
     try {
         // let response = await fetch(url);
-        // let data = await response.json();
+        // let apiData = await response.json();
 
         let data = [];
         data.push({name: "Molly", age: 4, present: true, uuid:uuidv4()});
@@ -40,6 +40,13 @@ async function getDogs() {
         console.log("dogs downloaded, returning list")
 
         return data;
+
+        // if (apiData !== undefined) {
+        //     return apiData;
+        // } else {
+        //     return data;
+        // }
+        
     }
     catch(error) {
         console.log("error")
