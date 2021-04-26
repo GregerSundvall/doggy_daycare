@@ -51,7 +51,7 @@ function App() {
       goToWelcome={() => setCurrentScreen(welcome)}/>;
       break;
     case welcome:
-      content = <Welcome dogList={dogList}/>;
+      content = <Welcome dogList={dogList} setDogList={setDogList}/>;
       break;
     case dogs:
       content = <Dogs/>;

@@ -6,28 +6,24 @@ import Logo from "./doggy.png";
 //import {getDogs} from "./Api";
 
 
-const Welcome = ({dogList}) => {
+const Welcome = ({dogList, setDogList}) => {
     console.log("welcome run")
-    const [dogs, setDogs] = useState([]);
     const [howManyPresent, setHowManyPresent] = useState(0);
     
 
-    useEffect(() => {
-        setDogs(dogList)
-    }, [dogList])
-    
+  
     useEffect(() => {
         let present = 0;
-        dogs.forEach(dog => {
+        dogList.forEach(dog => {
             if (dog.present) {
                 ++present
             }
         });
         setHowManyPresent(present);
-    }, [dogs])
+    }, [dogList])
     
     function handlePresence(uuid) {
-        const newList = dogs.map((dog) => {
+        const newList = dogList.map((dog) => {
             if (dog.uuid === uuid) {
                 const updatedDog = {
                     ...dog,
@@ -37,10 +33,10 @@ const Welcome = ({dogList}) => {
             }
             return dog;
         });
-        setDogs(newList);
+        setDogList(newList);
     }
 
-    const listItems = dogs.map((dog) =>{
+    const listItems = dogList.map((dog) =>{
         return (dog.present) ?
             <div key={dog.uuid}>
                 <li>{dog.name}</li>
