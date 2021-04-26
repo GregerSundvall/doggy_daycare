@@ -1,25 +1,40 @@
 
+
+
 import './App.css';
 import Splash from "./components/Splash";
 import Welcome from "./components/Welcome";
 import Menu from "./components/Menu";
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import Dogs from "./components/Dogs";
 import Owners from "./components/Owners";
 import Search from "./components/Search";
-
 import getDogs from "./components/Api";
 
 
 
 
 function App() {
-  //const [dogList, setDogList] = useState([]);
-  const [dogData, setDogData] = useState([]);
- 
+
+  const [dogList, setDogList] = useState([])
+
   useEffect(() => {
-    setDogData(getDogs);
-}, [])
+
+    async function fetchData() {
+      const data = await getDogs();
+      setDogList(data);
+      
+      console.log(data);
+    }
+
+
+    fetchData();
+  }, [])
+
+
+
+
+
 
   const splash = "splash",
     welcome = "welcome",
@@ -27,7 +42,7 @@ function App() {
     dogs = "dogs",
     search = "search";
 
-  const [currentScreen, setCurrentScreen] = useState(splash);
+  const [currentScreen, setCurrentScreen] = useState(welcome);
   let content = null;
   
   switch (currentScreen) {
@@ -36,8 +51,7 @@ function App() {
       goToWelcome={() => setCurrentScreen(welcome)}/>;
       break;
     case welcome:
-      content = <Welcome 
-        dogData={dogData} />;
+      content = <Welcome dogList={dogList}/>;
       break;
     case dogs:
       content = <Dogs/>;

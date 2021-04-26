@@ -33,8 +33,10 @@
 }
 
 .miniLogo {
-  width: 50vw;
-  height: 50vw;
+  width: 30vw;
+  height: 30vw;
+  align-self: center;
+  justify-self: center;
 }
 
 section {
@@ -44,7 +46,28 @@ section {
   justify-content: space-around;
   align-content: space-around;
 }
+ul div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3vw;
+}
+ul {
+  overflow: scroll;
+  height: 90vh;
+}
 
+div li {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+button {
+  background-color: rgb(250, 103, 50);
+  border: 0;
+  padding: 3vw;
+}
 
 /* 
 main {

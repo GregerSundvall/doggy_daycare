@@ -1,26 +1,51 @@
+
+
+
 import { useState, useEffect } from "react";
 import Logo from "./doggy.png";
+//import {getDogs} from "./Api";
 
-const Welcome = (dogData) => {
-    
-    console.log(dogData)
-    
-    const [dogList, setDogList] = useState([]);
 
+const Welcome = ({dogList}) => {
+    console.log("welcome run")
+    const [dogs, setDogs] = useState([]);
+    const [dogsPresent, setDogsPresent] = useState(0);
+    
     useEffect(() => {
-        for(let i = 0 ;i < dogData.length ; i++) {
-            setDogList(...dogList, dogData[i])
-            console.log(dogData[i])
-        }
-    }, [dogData, dogList, setDogList])
+        setDogs(dogList)
+    }, [dogList])
+    
+    useEffect(() => {
+        let present = 0;
+        dogs.forEach(dog => {
+            if (dog.present) {
+                ++present
+            }
+        });
+        setDogsPresent(present);
+    }, [dogs])
+    
 
-    console.log(dogList[0]);
+
+    const listItems = dogs.map((dog) =>{
+        return (dog.present) ?
+            <div key={dog.uuid}>
+                <li>{dog.name}</li>
+                <button>Check out</button>
+            </div>
+        : null
+    });
+    
+    
+
+    
 
     return (
             <section>
                 <img src={Logo} className="miniLogo" alt="dog"/>
-                <p>Welcome screen</p>
-                <p>{dogList.length} dogs</p>
+                <h1>Welcome to Doggy Daycare!</h1>
+                <p>{dogsPresent} dogs present</p>
+                <ul>{listItems}</ul>
             </section>
        
     )
