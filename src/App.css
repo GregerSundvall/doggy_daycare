@@ -91,6 +91,14 @@ button {
   padding: 2vw;
 }
 
+#checkedIn.selected,
+#checkedOut.selected,
+#checkedAll.selected {
+  background-color: coral;
+  border-color:  rgb(250, 103, 50);
+  border-bottom: 0;
+}
+
 
 /* 
 main {
