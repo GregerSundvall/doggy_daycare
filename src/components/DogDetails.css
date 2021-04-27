@@ -1,9 +1,51 @@
-section {
+#dogDetails {
+    height: 90vh;
     display: flex;
     flex-direction: column;
 }
 
+#dogDetails h1 {
+    width: 100vw;
+    background-color: limegreen;
+    color:rgb(0, 61, 0);
+    padding: 5vh;
+}
+
 img {
-    max-width: 90vw;
-    max-height: 90vw;
+    object-fit:cover;
+    height: 90vw;
+    width: 90vw;
+    box-shadow: rgb(46, 20, 1);
+}
+
+#ownerSection {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#ownerSection p {
+    margin-bottom: 0;
+}
+#ownerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0;
+}
+
+#miscInfo {
+    font-size: small;
+}
+
+#miscInfo tr {
+    display: flex;
+    flex-direction: row;
+}
+
+#miscInfo td {
+    flex: 1;
+    text-align: left;
 }

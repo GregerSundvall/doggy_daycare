@@ -6,7 +6,7 @@ import Logo from "./doggy.png";
 
 
 
-const Welcome = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
+const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
     const loggedIn = "loggedIn", loggedOut = "loggedOut", all = "all";
 
 
@@ -145,4 +145,4 @@ const Welcome = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
 
 
 
-export default Welcome;
+export default Dogs;

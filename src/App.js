@@ -3,10 +3,9 @@
 
 import './App.css';
 import Splash from "./components/Splash";
-import Welcome from "./components/Welcome";
 import Menu from "./components/Menu";
 import {useEffect, useState} from 'react';
-//import Dogs from "./components/Dogs";
+import Dogs from "./components/Dogs";
 import Owners from "./components/Owners";
 import Search from "./components/Search";
 import DogDetails from "./components/DogDetails";
@@ -40,22 +39,21 @@ function App() {
 
 
   const splash = "splash",
-    welcome = "welcome",
     dogDetails = "dogDetails",
     owners = "owners",
     dogs = "dogs",
     search = "search";
 
-  const [currentScreen, setCurrentScreen] = useState(welcome);
+  const [currentScreen, setCurrentScreen] = useState(dogs);
   let content = null;
   
   switch (currentScreen) {
     case splash:
       content = <Splash 
-      goToWelcome={() => setCurrentScreen(welcome)}/>;
+      goToDogs={() => setCurrentScreen(dogs)}/>;
       break;
-    case welcome:
-      content = <Welcome 
+    case dogs:
+      content = <Dogs 
         goToDogDetails = {() => setCurrentScreen(dogDetails)}
         setCurrentDog = {setCurrentDog}
         dogList={dogList} 
@@ -65,9 +63,6 @@ function App() {
         content = <DogDetails
         currentDog = {currentDog}/>;
         break;
-    case dogs:
-      //content = <Dogs/>;
-      break;
     case owners:
         content = <Owners/>;
         break;
@@ -75,7 +70,7 @@ function App() {
       content = <Search/>;
       break;
     default:
-      content = <Welcome/>;
+      content = <Dogs/>;
   }
 
   if(currentScreen === splash) {

@@ -5,15 +5,19 @@ const DogDetails = ({currentDog}) => {
     
 
     return (
-        <section>
+        <section id="dogDetails">
             <h1>{currentDog.name}</h1>
             <img src={currentDog.img} alt={currentDog.name}/>
-            <div>
-                <p>{currentDog.owner.name} {currentDog.owner.lastName}</p>
-                <p>{currentDog.owner.phoneNumber}</p>
+            <div id="ownerSection">
+                <p>Owner</p>
+                <div id="ownerInfo">
+                    <p>{currentDog.owner.name} {currentDog.owner.lastName}</p>
+                    <p>{currentDog.owner.phoneNumber}</p>
+                </div>
+                
             </div>
             <table>
-                <tbody>
+                <tbody id="miscInfo">
                     <tr>
                         <td>Age:</td>
                         <td>{currentDog.age}</td>
@@ -23,7 +27,7 @@ const DogDetails = ({currentDog}) => {
                     <tr>
                         <td>Sex:</td>
                         <td>{currentDog.sex}</td>
-                        <td>Chip number:</td>
+                        <td>Chip Nr:</td>
                         <td>{currentDog.chipNumber}</td>
                     </tr>
                 </tbody>
