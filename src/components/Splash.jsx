@@ -1,42 +1,23 @@
-import Logo from "./doggy.png";
-//import { useEffect, useState } from "react";
-
-
-//   let dogsData = getDogs();
-//   for(let i = 0; i < dogList.length; i++) {
-//     let dogData = dogsData[i]
-//     setDogList(...dogList, dogData)
-//     console.log(dogData)
-//   }
 
 
 
-const Splash = ({goToWelcome}) => {
+
+import Logo from "./doggyTrans.png";
+import TitleLogo from "./ddLogo2.png";
+
+
+const Splash = ({goToDogs}) => {
     
     
-
-    // useEffect(() => {
-    //     for(let i = 0 ;i < data.length ; i++) {
-    //         setDogList(...dogList, data[i])
-    //         console.log(data[i])
-    //     }
-    //     setGotData(true);
-    //     console.log(data);
-    //     //goToWelcome();
-    // }, [data])
-
-    // useEffect(() => {
-    //     console.log(gotData)
-    //     //goToWelcome();
-    // }, [gotData])
     
     setTimeout(() => { 
-        goToWelcome();
-    }, 1000);
+        goToDogs();
+    }, 1500);
 
     return (
         <main id="splash">
-            <img src={Logo} id="splashLogo" alt="dog"/>
+            <img id="splashLogo" src={Logo} alt="dog"/>
+            <img id="splashTitleLogo" src={TitleLogo} alt="Doggy Daycare"/>
             <p>Fetching Dogs...</p>
         </main>
     )

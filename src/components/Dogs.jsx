@@ -2,7 +2,8 @@
 
 
 import { useState, useEffect } from "react";
-import Logo from "./doggy.png";
+import Logo from "./doggyTrans.png";
+import TitleLogo from "./ddLogo2.png";
 
 
 
@@ -31,9 +32,9 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
     function getButtonText(chipNumber) {
         let result = dogList.filter(dog => dog.chipNumber === chipNumber);
         if (result[0].present === true) {
-            return "Check Out"
+            return "CHECK OUT"
         } else {
-            return "Check In"
+            return "CHECK IN"
         }
     }
 
@@ -45,28 +46,31 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
 
     const listItemsIn = dogList.map((dog) => {
         return (dog.present) ?
-            <div onClick={() => handleGoToDogDetails(dog)} key={dog.chipNumber}>
-                <li>{dog.name}</li>
-                <button onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
-            </div>
+            <li key={dog.chipNumber}>
+                <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
+                <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
+            </li>
             : null
     });
 
     const listItemsOut = dogList.map((dog) => {
         return (!dog.present) ?
-            <div onClick={() => handleGoToDogDetails(dog)} key={dog.chipNumber}>
-                <li>{dog.name}</li>
-                <button onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
-            </div>
+            <li id="listInfoWrapper" key={dog.chipNumber}>
+                <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
+                <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
+                <button className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
+            </li>
             : null
     });
 
     const listItemsAll = dogList.map((dog) => {
         return (
-            <div onClick={() => handleGoToDogDetails(dog)} key={dog.chipNumber}>
-                <li>{dog.name}</li>
-                <button onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
-            </div>
+            <li key={dog.chipNumber}>
+                <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
+                <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
+                <button className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
+            </li>
         )
     });
 
@@ -74,16 +78,16 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
     let content = null;
     switch (viewInOutAll) {
         case loggedIn:
-            content = <ul>{listItemsIn}</ul>;
+            content = <ul id="listWrapper">{listItemsIn}</ul>;
             break;
         case loggedOut:
-            content = <ul>{listItemsOut}</ul>;
+            content = <ul id="listWrapper">{listItemsOut}</ul>;
             break;
         case all:
-            content = <ul>{listItemsAll}</ul>;
+            content = <ul id="listWrapper">{listItemsAll}</ul>;
             break;
         default:
-            content = <ul>{listItemsIn}</ul>;
+            content = <ul id="listWrapper">{listItemsIn}</ul>;
     }
 
 
@@ -127,14 +131,16 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
 
     return (
         <section>
-            <img src={Logo} className="miniLogo" alt="dog" />
-            <h1>Welcome to Doggy Daycare!</h1>
+            <div id="logoWrapper">
+                <img src={TitleLogo} id="titleLogo" alt="Doggy Daycare"/>
+                <img src={Logo} id="miniLogo" alt="dog" />
+            </div>
             <nav id="checkedInMenu">
                 <div id="checkedIn" onClick={() => setViewInOutAll(loggedIn)}>Checked In</div>
                 <div id="checkedOut" onClick={() => setViewInOutAll(loggedOut)}>Checked Out</div>
                 <div id="checkedAll" onClick={() => setViewInOutAll(all)}>All Dogs</div>
             </nav>
-            <p>Showing {dogCount} dogs</p>
+            <p id="dogCount">Showing {dogCount} dogs</p>
             {content}
         </section>
 

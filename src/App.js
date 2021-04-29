@@ -23,10 +23,10 @@ function App() {
 
     async function fetchData() {
 
-      let response = await fetch("https://api.jsonbin.io/b/6087d126c7df3422f7fee228");
-      let data = await response.json();
+      // let response = await fetch("https://api.jsonbin.io/b/6087d126c7df3422f7fee228");
+      // let data = await response.json();
 
-      // const data = await getDogs();
+      const data = await getDogs();
       setDogList(data);
     }
 
@@ -44,7 +44,7 @@ function App() {
     dogs = "dogs",
     search = "search";
 
-  const [currentScreen, setCurrentScreen] = useState(dogs);
+  const [currentScreen, setCurrentScreen] = useState(splash);
   let content = null;
   
   switch (currentScreen) {
@@ -70,7 +70,7 @@ function App() {
       content = <Search/>;
       break;
     default:
-      content = <Dogs/>;
+      content = <Splash/>;
   }
 
   if(currentScreen === splash) {

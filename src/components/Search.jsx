@@ -1,4 +1,4 @@
-import Logo from "./doggy.png";
+import Logo from "./doggyTrans.png";
 
 const Search = () => {
     return (

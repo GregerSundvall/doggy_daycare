@@ -2,17 +2,41 @@
 
 
 .App, main {
-  color: rgb(85, 12, 12);
+  color:mediumturquoise;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color:floralwhite;
+  background-color:black;
+}
+
+#logoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5vh;
+  width: 100vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+#miniLogo {
+  height: 5vh;
+  object-fit: contain;
+  width:10vw;
+}
+#titleLogo {
+  height: 5vh;
+  width: 60vw;
+  object-fit: contain;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 #splashLogo {
@@ -20,170 +44,243 @@
   height: 90vw;
 }
 
-#menu {
+
+
+
+
+
+
+/* NAV MENU */
+
+#navMenu {
+  position: fixed;
+  bottom: 0;
   width: 100vw;
-  height: 6vh;
+  height: 7vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  justify-self: flex-end;
+  justify-content: center;
   flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
-#menuItem {
+#navMenuItem {
   flex: 1;
-  height: 6vh;
-  background-color: rgb(250, 103, 50);
-}
-
-.miniLogo {
-  width: 30vw;
-  height: 30vw;
-  align-self: center;
-  justify-self: center;
-}
-
-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: x-small;
 }
-ul div {
+.icon {
+  width: 6vw;
+  height: 5vw;
+}
+
+
+
+
+
+
+
+
+/* LIST OF DOGS */
+
+
+#listWrapper {
+  overflow-x: scroll;
+  height: 87vh;
+  width: 100vw;
+  list-style-type: none;
+  padding: 0;
+  width: 100vw;
+  justify-content: space-between;
+}
+#listWrapper>li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 3vw;
+  align-items: center;
+  padding: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
-ul {
-  overflow: scroll;
-  height: 90vh;
-  width: 82vw;
+#listName {
+  width: 30vw;
+  height: 1em;
+  text-align: left;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#listBreed {
+  width: 30vw;
+  height: 1em;
+  font-weight: normal;
+  font-size: small;
+  text-align: left;
+  text-transform: capitalize;
+}
+li button {
+  height: 2.5em;
+}
+.inOutButton {
+  font-size: smaller;
+  font-weight: bold;
+  width: 6em;
+  height: 1.2em;
+  background-color: black;
+  border: solid 2px mediumturquoise;
+  border-radius: 5px;
+  padding: 0.3em;
+  color: mediumturquoise;
 }
 
-div li {
-  display: flex;
-  flex-direction: column;
-  
-}
 
-button {
-  background-color: rgb(250, 103, 50);
-  border: 0;
-  padding: 3vw;
-}
+
+
+
+
+/* PRESENCE MENU */
 
 #checkedInMenu {
   display: flex;
   flex-direction: row;
   align-content:space-between;
-  width: 90vw;
-  
+  border-bottom: solid 3px mediumturquoise;
+  width: 100vw;
 }
 #checkedInMenu div {
   font-size: small;
   flex: 1;
-  background-color: rgb(250, 103, 50);
-  border: solid 1vw coral;
+  background-color: black;
+  border: solid 3px mediumturquoise;
+  border-bottom: 0;
   align-self: center;
   padding: 2vw;
+  margin: 2vw;
+  margin-bottom: 0;
 }
-
 #checkedIn.selected,
 #checkedOut.selected,
 #checkedAll.selected {
-  background-color: coral;
-  border-color:  rgb(250, 103, 50);
+  color: black;
+  background-color: mediumturquoise;
+  border-color:  mediumturquoise;
   border-bottom: 0;
 }
-
-
-/* 
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  background-color: rgb(1, 128, 111);
-  align-items: center;
-  justify-content: space-around;
-  height: 80vh;
-}
-section {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  align-items: center;
-  border: solid 5px blue;
-  flex: 1;
-}
-
-.spacer {
-  flex: 1;
-  border: solid 5px blue;
+#dogCount {
+  font-size: small;
+  height: 3vh;
 }
 
 
 
-#splashScreen {
-  width: 100vw;
+
+
+
+
+/* DOG DETAILS */
+
+#dogDetails {
   height: 100vh;
-  background-color: rgb(1, 128, 111);
+}
 
+#dogDetails h1 {
+  align-self:flex-start;
+  background-color: mediumturquoise;
+  color: black;
+  padding: 0.5em;
+  padding-right: 3em;
+  padding-left: 2em;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#dogInfoWrapper {
+  overflow-x: scroll;
+}
+#dogInfoWrapper>table {
+  padding-bottom: 20vh;
+  align-self: center;
+}
+#dogInfoWrapper>img {
+  object-fit:cover;
+  height: 90vw;
+  width: 90vw;
+}
+#ownerText {
+  font-size: small;
+  padding: 0.5em;
+  margin: 0;
+}
+#ownerSection {
+  padding: 2.5vh;
+}
+
+#ownerInfo {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: 1em;
+  padding: 0;
+  margin: 0;
 }
-
-#splashLogo {
-  width: 50vw;
-}
-
-.button, input {
-  width: 50vw;
-  height: 10vw;
-  background-color: rgb(255, 255, 255);
-  justify-content: center;
-  align-items: center;
+#ownerInfo p {
+  flex: 1;
 }
 
 
-
-
-
-
-
-
-
-.App-logo {
-  height: 40vw;
-  pointer-events: none;
+.miscInfoRow p {
+  text-transform: capitalize;
+  font-size: small;
+  height: 1.5em;
+  margin: 0;
+}
+#miscInfoWrapper {
+  margin-top: 1em;
+  margin-bottom: 15vh;
+}
+#miscInfoWrapper div {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-self: center;
+  
+}
+.miscInfoRow p {
+  flex: 1;
+}
+.alignRight {
+  text-align: right;
+  padding-left: 0.5em;
+}
+.alignLeft {
+  text-align: left;
+  padding-left: 0.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+/* SPLASH */
+
+#splash {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#splashLogo {
+  width: 60vw;
+  object-fit: contain;
+
+}
+#splashTitleLogo {
+  width: 90vw;
+  object-fit: contain;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
