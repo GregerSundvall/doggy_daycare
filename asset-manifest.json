@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/github.io/doggy_daycare/static/css/main.a747095e.chunk.css",
+    "main.js": "/github.io/doggy_daycare/static/js/main.878bd060.chunk.js",
+    "main.js.map": "/github.io/doggy_daycare/static/js/main.878bd060.chunk.js.map",
+    "runtime-main.js": "/github.io/doggy_daycare/static/js/runtime-main.2c53003e.js",
+    "runtime-main.js.map": "/github.io/doggy_daycare/static/js/runtime-main.2c53003e.js.map",
+    "static/js/2.8ec74d30.chunk.js": "/github.io/doggy_daycare/static/js/2.8ec74d30.chunk.js",
+    "static/js/2.8ec74d30.chunk.js.map": "/github.io/doggy_daycare/static/js/2.8ec74d30.chunk.js.map",
+    "static/js/3.244a5f1f.chunk.js": "/github.io/doggy_daycare/static/js/3.244a5f1f.chunk.js",
+    "static/js/3.244a5f1f.chunk.js.map": "/github.io/doggy_daycare/static/js/3.244a5f1f.chunk.js.map",
+    "index.html": "/github.io/doggy_daycare/index.html",
+    "static/css/main.a747095e.chunk.css.map": "/github.io/doggy_daycare/static/css/main.a747095e.chunk.css.map",
+    "static/js/2.8ec74d30.chunk.js.LICENSE.txt": "/github.io/doggy_daycare/static/js/2.8ec74d30.chunk.js.LICENSE.txt",
+    "static/media/ddLogo2.1cb21f1f.png": "/github.io/doggy_daycare/static/media/ddLogo2.1cb21f1f.png",
+    "static/media/doggyGlass.80dc8c21.png": "/github.io/doggy_daycare/static/media/doggyGlass.80dc8c21.png",
+    "static/media/doggyPerson.abcfc10f.png": "/github.io/doggy_daycare/static/media/doggyPerson.abcfc10f.png",
+    "static/media/doggyTrans.8e2d8003.png": "/github.io/doggy_daycare/static/media/doggyTrans.8e2d8003.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c53003e.js",
+    "static/js/2.8ec74d30.chunk.js",
+    "static/css/main.a747095e.chunk.css",
+    "static/js/main.878bd060.chunk.js"
+  ]
+}
