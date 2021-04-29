@@ -20,21 +20,12 @@ function App() {
   const [currentDog, setCurrentDog] = useState();
 
   useEffect(() => {
-
     async function fetchData() {
-
-      // let response = await fetch("https://api.jsonbin.io/b/6087d126c7df3422f7fee228");
-      // let data = await response.json();
-
       const data = await getDogs();
       setDogList(data);
     }
-
     fetchData();
   }, [])
-
-
-
 
 
 
@@ -86,6 +77,7 @@ function App() {
         <Menu 
           goToDogs={() => setCurrentScreen(dogs)}
           goToOwners={() => setCurrentScreen(owners)}
+          goToSearch={() => setCurrentScreen(search)}
         />
       </main>
   

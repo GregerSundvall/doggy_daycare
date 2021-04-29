@@ -4,7 +4,7 @@ import Logo from "./doggyTrans.png";
 import Person from "./doggyPerson.png";
 import Glass from "./doggyGlass.png";
 
-const Menu = ({goToDogs, goToOwners}) => (
+const Menu = ({goToDogs, goToOwners, goToSearch}) => (
     <nav id="navMenu">
 
         <div id="navMenuItem" onClick={goToDogs}>
@@ -12,12 +12,12 @@ const Menu = ({goToDogs, goToOwners}) => (
             <p>DOGS</p>
         </div>
 
-        <div id="navMenuItem">
+        <div id="navMenuItem" onClick={goToOwners}>
             <img src={Person} alt="" className="icon"/>
-            <p id="menuItem" onClick={goToOwners}>OWNERS</p>
+            <p id="menuItem">OWNERS</p>
         </div>
 
-        <div id="navMenuItem">
+        <div id="navMenuItem" onClick={goToSearch}>
             <img src={Glass} alt="" className="icon"/>
             <p id="menuItem">SEARCH</p>
         </div>

@@ -2,7 +2,7 @@
   "name": "doggy_daycare",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://GregerSundvall/github.io/doggy_daycare",
+  "homepage" : "https://GregerSundvall.github.io/doggy_daycare",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
