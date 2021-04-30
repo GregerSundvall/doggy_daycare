@@ -10,6 +10,8 @@ import Owners from "./components/Owners";
 import Search from "./components/Search";
 import DogDetails from "./components/DogDetails";
 import getDogs from "./components/Api";
+import Logo from "./components/doggyTrans.png";
+import TitleLogo from "./components/ddLogo2.png";
 
 
 
@@ -76,6 +78,10 @@ function App() {
   } else {
     return (
       <main>
+        <header id="appHeader">
+          <img src={TitleLogo} id="titleLogo" alt="Doggy Daycare"/>
+          <img src={Logo} id="miniLogo" alt="dog" />
+        </header>
         {content}
         <Menu 
           goToDogs={() => setCurrentScreen(dogs)}

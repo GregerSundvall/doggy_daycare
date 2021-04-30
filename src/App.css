@@ -1,6 +1,14 @@
 
 
-
+#appHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5vh;
+  width: 100vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
 .App, main {
   color:mediumturquoise;
   text-align: center;
@@ -11,15 +19,7 @@
   background-color:black;
 }
 
-#logoWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 5vh;
-  width: 100vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-}
+
 #miniLogo {
   height: 5vh;
   object-fit: contain;
@@ -140,7 +140,7 @@ li button {
 
 
 
-/* PRESENCE MENU */
+/* PRESENCE OPTIONS BAR */
 
 #checkedInMenu {
   display: flex;
@@ -263,6 +263,37 @@ li button {
 
 
 
+/* SEARCH */
+
+#searchBar {
+  top: 0;
+  height: 6vh;
+  width: 100vw;
+  background-color: black;
+  align-items:baseline;
+  border-bottom: solid 3px aqua;
+}
+#searchBox {
+  height: 5vh;
+  width: 80vw;
+  background-color: black;
+  border: solid 3px aqua;
+  border-bottom: 0;
+  margin-left: 2vw;
+  color: aqua;
+  text-align: right;
+}
+#magGlass {
+  height:4vh;
+  border: solid 3px aqua;
+  background-color: aqua;
+  margin-right: 2vw;
+}
+#resultsWrapper {
+  height: 90vh;
+  width: 100vw;
+}
+
 
 
 
@@ -272,6 +303,8 @@ li button {
 #splash {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 #splashLogo {
   width: 60vw;
@@ -281,6 +314,7 @@ li button {
 #splashTitleLogo {
   width: 90vw;
   object-fit: contain;
+  margin-bottom: 20vh;
 }
 
 

@@ -2,8 +2,6 @@
 
 
 import { useState, useEffect } from "react";
-import Logo from "./doggyTrans.png";
-import TitleLogo from "./ddLogo2.png";
 
 
 
@@ -131,10 +129,6 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
 
     return (
         <section>
-            <div id="logoWrapper">
-                <img src={TitleLogo} id="titleLogo" alt="Doggy Daycare"/>
-                <img src={Logo} id="miniLogo" alt="dog" />
-            </div>
             <nav id="checkedInMenu">
                 <div id="checkedIn" onClick={() => setViewInOutAll(loggedIn)}>Checked In</div>
                 <div id="checkedOut" onClick={() => setViewInOutAll(loggedOut)}>Checked Out</div>

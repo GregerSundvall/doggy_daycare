@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "./doggyTrans.png";
+import magGlass from "./magGlass.png";
 
 const Search = ({dogList, setCurrentDog, goToDogDetails}) => {
 
@@ -75,10 +75,13 @@ const Search = ({dogList, setCurrentDog, goToDogDetails}) => {
 
     return (
         <section>
-            <ul>
+            <div id="searchBar">
+                <input type="text" id="searchBox" value={query} onInput={e=>handleInput(e)}/>
+                <img id="magGlass" src={magGlass} alt="Magnifying glass"/>
+            </div>
+            <ul id="resultsWrapper">
                 {listItems}
             </ul>
-            <input type="text" id="searchBox" value={query} onInput={e=>handleInput(e)}/>
         </section>
 
     )
