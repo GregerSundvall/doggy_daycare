@@ -58,7 +58,10 @@ function App() {
         content = <Owners/>;
         break;
     case search:
-      content = <Search/>;
+      content = <Search 
+      dogList = {dogList}
+      setCurrentDog = {setCurrentDog}
+      goToDogDetails = {() => setCurrentScreen(dogDetails)}/>;
       break;
     default:
       content = <Splash/>;
