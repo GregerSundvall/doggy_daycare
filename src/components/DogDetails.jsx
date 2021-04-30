@@ -1,7 +1,25 @@
+import { useEffect, useState } from "react";
 
 
-const DogDetails = ({currentDog}) => {
+const DogDetails = ({currentDog, dogList, setDogList}) => {
     
+    const [buttonText, setButtonText] = useState("");
+    const [present, setPresent] = useState(currentDog.present);
+
+    useEffect(() => {
+        setButtonText(present ? "Check Out" : "Check In");
+    }, [present])
+
+
+    const handleClick = e => {
+        currentDog.present = !currentDog.present;
+        setPresent(!present)
+    }
+
+
+   
+
+   
 
     return (
         <section id="dogDetails">
@@ -13,6 +31,9 @@ const DogDetails = ({currentDog}) => {
             </h2>
             <div id="dogInfoWrapper">
                 <img src={currentDog.img} alt={currentDog.name}/>
+                <div>
+                    <div className="inOutButton" onClick={e=>handleClick(e)}>{buttonText}</div>
+                </div>
                 <div id="ownerSection">
                     <p id="ownerText">Owner</p>
                     <div id="ownerInfo">

@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
     const loggedIn = "loggedIn", loggedOut = "loggedOut", all = "all";
-
+    let previousTab = "";
 
 
 
@@ -47,7 +47,7 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
             <li key={dog.chipNumber}>
                 <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
                 <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
-                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}> {getButtonText(dog.chipNumber)} </div>
             </li>
             : null
     });
@@ -57,7 +57,7 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
             <li id="listInfoWrapper" key={dog.chipNumber}>
                 <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
                 <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
-                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}> {getButtonText(dog.chipNumber)} </div>
             </li>
             : null
     });
@@ -67,7 +67,7 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
             <li key={dog.chipNumber}>
                 <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
                 <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
-                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}> {getButtonText(dog.chipNumber)} </div>
             </li>
         )
     });

@@ -54,7 +54,9 @@ function App() {
       break;
     case dogDetails:
         content = <DogDetails
-        currentDog = {currentDog}/>;
+        currentDog = {currentDog}
+        dogList={dogList}
+        setDogList= {setDogList}/>;
         break;
     case owners:
         content = <Owners/>;
