@@ -59,7 +59,7 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
             <li id="listInfoWrapper" key={dog.chipNumber}>
                 <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
                 <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
-                <button className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
             </li>
             : null
     });
@@ -69,7 +69,7 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
             <li key={dog.chipNumber}>
                 <p id="listName" onClick={() => handleGoToDogDetails(dog)}>{dog.name}</p>
                 <p id="listBreed" onClick={() => handleGoToDogDetails(dog)}>{dog.breed}</p>
-                <button className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</button>
+                <div className="inOutButton" onClick={() => handlePresence(dog.chipNumber)}>{getButtonText(dog.chipNumber)}</div>
             </li>
         )
     });
