@@ -147,7 +147,7 @@ li button {
   align-content:space-between;
   border-bottom: solid 3px mediumturquoise;
   width: 100vw;
-  height: 2em;
+  height: 5vh;
   margin: 0;
 }
 #checkedInMenu div {
@@ -156,12 +156,14 @@ li button {
   flex: 1;
   background-color: black;
   border: solid 3px mediumturquoise;
+  border-bottom: 0;
   align-self: center;
-  padding: 2vw;
-  margin: 2vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
   margin-bottom: 0;
   overflow: hidden;
-  height: 2em;
+  height: 3.5vh;
+  padding-top: 1vh;
 }
 #checkedIn.selected,
 #checkedOut.selected,
@@ -186,49 +188,6 @@ li button {
 
 
 
-/* SEARCH */
-
-#searchBar {
-  border-bottom: solid 3px mediumturquoise;
-  width: 100vw;
-  height: 5vh;
-  margin: 0;
-}
-#searchBox {
-  display: inline-block;
-  width: 95vw;
-  background-color: black;
-  color: black;
-  margin: 0;
-  overflow: hidden;
-  height: 4.5vh;
-  border: solid 3px mediumturquoise;
-  justify-items: right;
-}
-#searchSpan {
-  display: inline-block;
-  overflow: hidden;
-  width: 80vw;
-  color: mediumturquoise;
-  font-size: medium;
-  height: 4vh;
-}
-
-#magGlass {
-  display: inline-block;
-  background: mediumturquoise;
-  height: 4.5vh;
-  margin: 0;
-  justify-self: right;
-}
-
-
-
-#resultsWrapper {
-  height: 80vh;
-  width: 100vw;
-  margin: 0;
-}
 
 
 
@@ -236,6 +195,8 @@ li button {
 
 #dogDetails {
   height: 95vh;
+  padding-top: 0;
+  justify-content: space-between;
 }
 
 #dogDetailsNameBar {
@@ -248,10 +209,10 @@ li button {
 
 #dogDetailsNameBox {
   height: 4.5vh;
-  width: 95vw;
+  width: 50vw;
   margin: 0;
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
   border: solid 3px mediumturquoise;
   padding: 0;
   overflow: hidden;
@@ -259,21 +220,12 @@ li button {
 #dogDetailsName {
   height: 2vh;
   font-size: large;
+  font-weight: normal;
   margin: 0;
   padding-top: 1vh;
 }
 
-/* #dogDetails h1 {
-  align-self:flex-start;
-  background-color: mediumturquoise;
-  color: black;
-  padding: 0.5em;
-  padding-right: 3em;
-  padding-left: 2em;
-  text-align: center;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-} */
+
 #dogInfoWrapper {
   overflow-x: scroll;
 }
@@ -340,6 +292,49 @@ li button {
 
 
 
+/* SEARCH */
+
+#searchBar {
+  border-bottom: solid 3px mediumturquoise;
+  width: 100vw;
+  height: 5vh;
+  margin: 0;
+}
+#searchBox {
+  display: inline-block;
+  width: 95vw;
+  background-color: black;
+  color: black;
+  margin: 0;
+  overflow: hidden;
+  height: 4.5vh;
+  border: solid 3px mediumturquoise;
+  justify-items: right;
+}
+#searchSpan {
+  display: inline-block;
+  overflow: hidden;
+  width: 80vw;
+  color: mediumturquoise;
+  font-size: medium;
+  height: 4vh;
+}
+
+#magGlass {
+  display: inline-block;
+  background: mediumturquoise;
+  height: 4.5vh;
+  margin: 0;
+  justify-self: right;
+}
+
+
+
+#resultsWrapper {
+  height: 80vh;
+  width: 100vw;
+  margin: 0;
+}
 
 
 
