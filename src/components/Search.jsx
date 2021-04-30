@@ -28,6 +28,10 @@ const Search = ({dogList, setCurrentDog, goToDogDetails}) => {
     const handleInput = e => {
         setQuery(e.target.value)
     }
+
+    useEffect(() => {
+        document.getElementById("searchBox").focus = true;
+    }, [])
    
 
     function handlePresence(chipNumber) {
@@ -75,10 +79,12 @@ const Search = ({dogList, setCurrentDog, goToDogDetails}) => {
 
     return (
         <section>
-            <div id="searchBar">
-                <input type="text" id="searchBox" value={query} onInput={e=>handleInput(e)}/>
-                <img id="magGlass" src={magGlass} alt="Magnifying glass"/>
-            </div>
+            <h2 id="searchBar">
+                <div id="searchBox">
+                    <span type="text"  id="searchSpan"contentEditable="true" value={query} onInput={e=>handleInput(e)}/>
+                    <img id="magGlass" src={magGlass} alt="Magnifying glass"/>
+                </div>
+            </h2>
             <ul id="resultsWrapper">
                 {listItems}
             </ul>

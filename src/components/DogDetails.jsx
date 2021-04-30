@@ -5,7 +5,12 @@ const DogDetails = ({currentDog}) => {
 
     return (
         <section id="dogDetails">
-            <h1>{currentDog.name}</h1>
+            <h2 id="dogDetailsNameBar">
+                <div id="dogDetailsNameBox">
+                    <p id="dogDetailsName">{currentDog.name}</p>
+                </div>
+                
+            </h2>
             <div id="dogInfoWrapper">
                 <img src={currentDog.img} alt={currentDog.name}/>
                 <div id="ownerSection">

@@ -129,11 +129,11 @@ const Dogs = ({ goToDogDetails, setCurrentDog ,dogList, setDogList}) => {
 
     return (
         <section>
-            <nav id="checkedInMenu">
+            <h2 id="checkedInMenu">
                 <div id="checkedIn" onClick={() => setViewInOutAll(loggedIn)}>Checked In</div>
                 <div id="checkedOut" onClick={() => setViewInOutAll(loggedOut)}>Checked Out</div>
                 <div id="checkedAll" onClick={() => setViewInOutAll(all)}>All Dogs</div>
-            </nav>
+            </h2>
             <p id="dogCount">Showing {dogCount} dogs</p>
             {content}
         </section>
