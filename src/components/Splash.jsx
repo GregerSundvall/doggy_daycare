@@ -12,7 +12,7 @@ const Splash = ({goToDogs}) => {
     
     setTimeout(() => { 
         goToDogs();
-    }, 500);
+    }, 2000);
 
     return (
         <main id="splash">

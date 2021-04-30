@@ -32,7 +32,7 @@ const DogDetails = ({currentDog, dogList, setDogList}) => {
             <div id="dogInfoWrapper">
                 <img src={currentDog.img} alt={currentDog.name}/>
                 <div>
-                    <div className="inOutButton" onClick={e=>handleClick(e)}>{buttonText}</div>
+                    <div id="detailsInOutButton" className="inOutButton" onClick={e=>handleClick(e)}>{buttonText}</div>
                 </div>
                 <div id="ownerSection">
                     <p id="ownerText">Owner</p>
